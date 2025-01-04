@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotaz na místo bydliště</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        // Přidáme event listener pro klávesu
+        document.addEventListener('keydown', function(event) {
+            // Zkontrolujeme, jestli byla stisknuta mezerníková klávesa
+            if (event.key === '*' || event.code === '*') {
+                location.reload();  // Načte stránku znovu
+            }
+        });
+    </script>
+
+    <style>
+        body {
+          background-image: url("freakyforecast.jpg");
+        }
+        </style>
+        
+</head>
+<body>
+
+    <div class="container">
+       <h1>Předpoveď počasí</h1>
+        
+        <!-- Formulář pro zadání místa bydliště -->
+        <label for="address">Zadejte své místo bydliště:</label>
+        <input type="text" id="address" placeholder="Například Praha, Brno...">
+
+        <button id="confirmBtn">Potvrdit</button>
+
+        <!-- Načítací bar -->
+        <div id="loader" class="loader" style="display: none;"></div>
+
+        <!-- Zpráva po načtení -->
+        <div id="message" style="display: none;">
+            <h2> podívej se z okna 💀🙏</
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
