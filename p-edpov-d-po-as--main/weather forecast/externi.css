@@ -1,0 +1,64 @@
+/* Styl pro kontejner tlačítek */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 tlačítka na řadu */
+    gap: 5px; /* Mezery mezi tlačítky */
+    padding: 5px;
+    justify-items: center;
+    margin-top: 50px; /* Pro lepší umístění */
+}
+
+/* Styl pro jednotlivá tlačítka */
+.button {
+    position: relative;
+    width: 200px; /* Šířka tlačítka */
+    height: 100px; /* Výška tlačítka */
+    background-color: #007BFF;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Styl pro ikony */
+.icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Oříznutí obrázku do čtverce */
+    border-radius: 8px; /* Zaoblení rohů ikony */
+}
+
+/* Styl pro animované kolečko */
+.circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Efekt při najetí na tlačítko */
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Animace pro kliknutí na tlačítko */
+.button:active .circle {
+    opacity: 1;
+    transform: scale(4);
+    transition: opacity 0.3s, transform 0.3s;
+}

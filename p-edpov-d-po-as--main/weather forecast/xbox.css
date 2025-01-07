@@ -1,0 +1,30 @@
+/* Obecný styl pro kontejner */
+.container {
+    display: flex;            /* Používáme Flexbox pro uspořádání položek */
+    flex-wrap: wrap;          /* Když není místo, položky se zabalí do nového řádku */
+    justify-content: space-between; /* Mezi položkami bude rovnoměrný prostor */
+    gap: 10px;                /* Mezera mezi položkami */
+  }
+  
+  /* Styl pro jednotlivé položky */
+  .item {
+    flex: 1 1 200px;          /* Flexibilní položky, minimálně 200px široké, mohou se roztahovat */
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  /* Media Queries pro mobilní zobrazení */
+  @media (max-width: 768px) {
+    .item {
+      flex: 1 1 150px;        /* Na menších obrazovkách bude šířka prvků 150px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .item {
+      flex: 1 1 100%;         /* Na mobilních obrazovkách se prvky roztáhnou na 100% šířky */
+    }
+  }
+  
